@@ -20,13 +20,13 @@ versions of libharu.
 
 To test with libharu 2.3.0 (appears to work):
 ```
-$ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_3_0 -- --http-listen=localhost:8080
+nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_3_0 -- --http-listen=localhost:8080
 ```
 Then, browse to: http://localhost:8080 and Click the "Export to PDF" button.
 
 To test with a libharu 2.4.3 build (fails):
 ```
-$ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_4_3 -- --http-listen=localhost:8080
+nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_4_3 -- --http-listen=localhost:8080
 ```
 Then, browse to: http://localhost:8080 and Click the "Export to PDF" button.
 Note: missing y-axis labels, title, and legend when compared with libharu 2.3.0 output.
@@ -35,12 +35,12 @@ Note: missing y-axis labels, title, and legend when compared with libharu 2.3.0 
 
 Reverting commit fb11e6913 from the 2.4.3 branch:
 ```
-$ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_4_3_revert_fb11e6913 -- --http-listen=localhost:8080
+nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_4_3_revert_fb11e6913 -- --http-listen=localhost:8080
 ```
 
 Also, the issue seems to be addressed on the libharu development branch, as of 20230509:
 ```
-$ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_devel_20230509 -- --http-listen=localhost:8080
+nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_devel_20230509 -- --http-listen=localhost:8080
 ```
 
 ## Other notes:
@@ -49,5 +49,5 @@ The nix flake has only been tested with x86_64-linux.
 
 To see all available builds:
 ```
-$ nix flake show github:tollb/wt_haru_test
+nix flake show github:tollb/wt_haru_test
 ```
