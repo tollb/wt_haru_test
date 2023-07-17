@@ -14,7 +14,7 @@ https://github.com/libharu/libharu/issues/258
 
 For reproducibility, there are also two nix related files: nix.flake and nix.lock, that
 make it easy to build test cases using the test program linked with wt 4.10.0 and various
-versions of libharu.
+versions of libharu (see: https://nixos.org/).
 
 ## Test procedure
 
