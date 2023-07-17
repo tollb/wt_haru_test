@@ -99,6 +99,7 @@ TestApp::TestApp(const WEnvironment& env) : WApplication(env)
   setTitle("WCartesianChart with Vertical Y-Axis Title");
 
   auto model = std::make_shared<WStandardItemModel>(20, 2);
+  model->setHeaderData(1, Orientation::Horizontal, "Data Point");
   for (int r = 0; r < model->rowCount(); ++r)
     for (int c = 0; c < model->columnCount(); ++c)
       model->setData(model->index(r, c), r * ((c == 1) ? 1 : -1));
@@ -113,6 +114,7 @@ TestApp::TestApp(const WEnvironment& env) : WApplication(env)
   chart_->axis(Chart::Axis::X).setTitleOrientation(Orientation::Horizontal);
   chart_->axis(Chart::Axis::Y).setTitle("Y-Axis Title");
   chart_->axis(Chart::Axis::Y).setTitleOrientation(Orientation::Vertical);
+  chart_->setLegendEnabled(true);
 
   auto chart_pdf_resource = std::make_shared<ChartPdfResource>();
 
