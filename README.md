@@ -16,7 +16,7 @@ For reproducibility, there are also two nix related files: nix.flake and nix.loc
 make it easy to build test cases using the test program linked with wt 4.10.0 and various
 versions of libharu.
 
-##Test procedure
+## Test procedure
 
 To test with libharu 2.3.0 (appears to work):
 ```
@@ -31,7 +31,7 @@ $ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_2_4_3 -- --http-
 Then, browse to: http://localhost:8080 and Click the "Export to PDF" button.
 Note: missing y-axis labels, title, and legend when compared with libharu 2.3.0 output.
 
-##Other build/test options that seem to work:
+## Other build/test options that seem to work:
 
 Reverting commit fb11e6913 from the 2.4.3 branch:
 ```
@@ -43,7 +43,7 @@ Also, the issue seems to be addressed on the libharu development branch, as of 2
 $ nix run github:tollb/wt_haru_test#test_chart_wt4_10_0_libharu_devel_20230509 -- --http-listen=localhost:8080
 ```
 
-##Other notes:
+## Other notes:
 
 The nix flake has only been tested with x86_64-linux.
 
